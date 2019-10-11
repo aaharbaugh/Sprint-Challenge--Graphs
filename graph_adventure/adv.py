@@ -54,11 +54,6 @@ while len(visited) < len(roomGraph):
         #add all directions using our direction finding algo
         roomTrack[roomid] = checkDirections(roomid)
 
-        if roomid not in roomTrack:
-            graph[player.currentRoom.id] = player.currentRoom.getExits()
-            previousdirection = opposites[-1]
-            roomTrack[roomid].remove(previousdirection)
-
     #check if there are any more directions to travel. 
     if len(roomTrack[roomid]) < 1:
         previousDirection = previousRoom.pop()
